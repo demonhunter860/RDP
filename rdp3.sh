@@ -5,7 +5,7 @@ username="user"
 password="root"
 
 # Set default CRP value
-CRP=""
+CRP="DISPLAY= /opt/google/chrome-remote-desktop/start-host --code="4/0AdLIrYcJb8ZxpMzfwrWPxJFq3VQ8y49ejZYAOYf3rbHpT69wc_3PVZLcwcs-mX8Kt9_11g" --redirect-url="https://remotedesktop.google.com/_/oauthredirect" --name=$(hostname)"
 
 # Set default Pin value
 Pin="123456"
@@ -42,9 +42,6 @@ echo "Installing Google Chrome"
 wget https://dl.google.com/linux/direct/google-chrome-stable_current_amd64.deb
 sudo dpkg --install google-chrome-stable_current_amd64.deb
 sudo apt install --assume-yes --fix-broken
-
-# Prompt user for CRP value
-read -p "Enter CRP value: " CRP
 
 echo "Finalizing"
 if [ "$Autostart" = true ]; then
